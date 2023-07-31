@@ -1,16 +1,18 @@
-# ⚡ Sync Appwrite to Meilisearch Function
+# ⚡ Node.js Sync with Meilisearch Function
 
-Syncs documents in an Appwrite database collection to a Meilisearch index.
+Intuitive search bar for any data in Appwrite Databases.
 
 ## 🧰 Usage
 
 ### `GET /`
 
-Returns HTML page where search can be performed to test the indexing.
+HTML form for interacting with the model.
 
 ### `POST /`
 
 Triggers indexing of the Appwrite database collection to Meilisearch.
+
+No parameters required.
 
 **Response**
 
@@ -67,15 +69,6 @@ The URL endpoint of the Appwrite server. If not provided, it defaults to the App
 | Required     | No                             |
 | Sample Value | `https://cloud.appwrite.io/v1` |
 
-### APPWRITE_PROJECT_ID
-
-The ID of the Appwrite project associated with the function.
-
-| Question     | Answer              |
-| ------------ | ------------------- |
-| Required     | Yes                 |
-| Sample Value | `builtWithAppwrite` |
-
 ### MEILISEARCH_ENDPOINT
 
 The host URL of the Meilisearch server.
@@ -99,10 +92,10 @@ The admin API key for Meilisearch.
 
 Name of the Meilisearch index to which the documents will be synchronized.
 
-| Question     | Answer     |
-| ------------ | ---------- |
-| Required     | Yes        |
-| Sample Value | `my_index` |
+| Question     | Answer           |
+| ------------ | ---------------- |
+| Required     | Yes              |
+| Sample Value | `appwrite_index` |
 
 ### MEILISEARCH_SEARCH_API_KEY
 
