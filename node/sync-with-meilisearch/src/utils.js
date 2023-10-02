@@ -34,6 +34,7 @@ export function getStaticFile(fileName) {
 }
 
 /**
+ * Returns the template with the values interpolated
  * @param {string} template
  * @param {Record<string, string | undefined>} values
  * @returns {string}
